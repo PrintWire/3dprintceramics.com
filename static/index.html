@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3D Print Ceramics: technical ceramics, porcelain, tile, and stone additive manufacturing news, research, and a directory connecting studios to suppliers.">
+  <title>3D Print Ceramics — Technical Ceramic &amp; Porcelain AM News &amp; Suppliers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/editorial.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────── -->
+<header class="ed-header">
+  <div class="ed-header-inner">
+    <a href="index.html" class="ed-logo">
+      3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">CERAMICS</span>
+    </a>
+    <button class="ed-nav-toggle" aria-label="Menu" onclick="document.querySelector('.ed-nav').classList.toggle('open')">&#9776;</button>
+    <nav class="ed-nav">
+      <a href="index.html" class="active">News</a>
+      <a href="/articles/">Research</a>
+      <a href="#suppliers">Suppliers</a>
+      <a href="#suppliers">Materials</a>
+      <a href="#suppliers">Studios</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="ed-theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">&#9728;</button>
+  </div>
+</header>
+
+<!-- ── Breadcrumbs ────────────────────────────── -->
+<div class="ed-breadcrumbs">
+  <a href="index.html">Home</a> <span>/</span> Ceramic &amp; Porcelain AM News
+</div>
+
+<!-- ── Main Layout ────────────────────────────── -->
+<div class="ed-layout">
+  <div class="ed-main">
+
+    <!-- Featured Story -->
+    <article class="ed-hero">
+      <img src="images/03_textured_collection.png" alt="3D printed ceramic collection">
+      <div class="ed-hero-overlay"></div>
+      <div class="ed-hero-content">
+        <span class="ed-badge">Aerospace</span>
+        <h1><a href="#">Ceramic Matrix Composites Are Reaching the Turbine</a></h1>
+        <div class="ed-hero-meta">
+          <span>June 27, 2026</span>
+          <span>·</span>
+          <span>8 min read</span>
+          <span>·</span>
+          <span>By PrintWire Editorial</span>
+        </div>
+        <p class="ed-hero-excerpt">Higher operating temperatures at lower weight — printed CMCs and technical ceramics are moving from the lab into production engines and fine tableware alike.</p>
+      </div>
+    </article>
+
+    <!-- Stats Bar -->
+    <div class="ed-stats">
+      <div class="ed-stat">
+        <div class="ed-stat-value">1600°C</div>
+        <div class="ed-stat-label">Firing Range</div>
+      </div>
+      <div class="ed-stat">
+        <div class="ed-stat-value">99.5%</div>
+        <div class="ed-stat-label">Sintered Density</div>
+      </div>
+      <div class="ed-stat">
+        <div class="ed-stat-value">±0.2mm</div>
+        <div class="ed-stat-label">Post-Fire Tolerance</div>
+      </div>
+      <div class="ed-stat">
+        <div class="ed-stat-value">82+</div>
+        <div class="ed-stat-label">Active Suppliers</div>
+      </div>
+    </div>
+
+    <!-- PrintWire Originals — network-wide originals (featured) -->
+    <div class="ed-section-label" style="border-left:3px solid var(--accent);padding-left:0.6rem;">
+      PrintWire Originals
+      <a href="/articles/">View All &rarr;</a>
+    </div>
+    <div class="ed-card-grid" id="pwOriginals">
+      <div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Loading PrintWire articles…</div>
+    </div>
+
+    <!-- Latest News — PrintWire + industry (RSS) -->
+    <div class="ed-section-label">
+      Latest Industry News
+      <a href="#">View All &rarr;</a>
+    </div>
+    <div class="ed-card-grid" id="newsGrid">
+      <div style="grid-column: 1/-1; text-align:center; padding:2rem; color:var(--text-faint);">Loading latest news…</div>
+    </div>
+
+    <!-- Analysis & Deep Dives -->
+    <div class="ed-section-label">
+      Analysis &amp; Deep Dives
+      <a href="#">View All &rarr;</a>
+    </div>
+    <div class="ed-list">
+      <article class="ed-list-item">
+        <img src="images/09_abstract_sculpture.png" alt="Printed ceramic sculpture">
+        <div>
+          <span class="ed-badge">Technical</span>
+          <div class="ed-card-meta">June 24, 2026 · 9 min read</div>
+          <h3><a href="#">Zirconia vs. Alumina: Choosing a Technical Ceramic for DLP Printing</a></h3>
+          <p class="ed-card-excerpt">Density, flexural strength, and sintering shrinkage diverge sharply between the two workhorse technical ceramics. A materials engineer's comparison.</p>
+        </div>
+      </article>
+      <article class="ed-list-item">
+        <img src="images/08_teacup_set.png" alt="Printed porcelain tableware">
+        <div>
+          <span class="ed-badge">Tableware</span>
+          <div class="ed-card-meta">June 20, 2026 · 7 min read</div>
+          <h3><a href="#">Printed Porcelain: Firing Tableware to Slip-Cast Standards</a></h3>
+          <p class="ed-card-excerpt">How studios are dialing in paste extrusion, drying, and glaze firing to match traditional slip-cast quality at production scale.</p>
+        </div>
+      </article>
+      <article class="ed-list-item">
+        <img src="images/06_wall_panel.png" alt="Ceramic wall panel">
+        <div>
+          <span class="ed-badge">Architecture</span>
+          <div class="ed-card-meta">June 18, 2026 · 10 min read</div>
+          <h3><a href="#">Printed Ceramic Facade Tiles: Parametric Relief Without Molds</a></h3>
+          <p class="ed-card-excerpt">Glazed architectural ceramics with per-tile geometry are moving from art installations to specified cladding systems.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Applications -->
+    <div class="ed-section-label">
+      Applications We Cover
+    </div>
+    <div class="ed-card-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem;">
+      <a href="#" class="ed-card" style="text-align:center;">
+        <img class="ed-card-img" src="images/01_voronoi_vase.png" alt="Decor & Vases">
+        <div class="ed-card-body"><h3>Decor &amp; Vases</h3></div>
+      </a>
+      <a href="#" class="ed-card" style="text-align:center;">
+        <img class="ed-card-img" src="images/08_teacup_set.png" alt="Tableware">
+        <div class="ed-card-body"><h3>Tableware</h3></div>
+      </a>
+      <a href="#" class="ed-card" style="text-align:center;">
+        <img class="ed-card-img" src="images/06_wall_panel.png" alt="Architecture">
+        <div class="ed-card-body"><h3>Architecture</h3></div>
+      </a>
+      <a href="#" class="ed-card" style="text-align:center;">
+        <img class="ed-card-img" src="images/05_lattice_cubes.png" alt="Technical">
+        <div class="ed-card-body"><h3>Technical</h3></div>
+      </a>
+      <a href="#" class="ed-card" style="text-align:center;">
+        <img class="ed-card-img" src="images/07_studio_workstation.png" alt="Studios">
+        <div class="ed-card-body"><h3>Studios</h3></div>
+      </a>
+      <a href="#" class="ed-card" style="text-align:center;">
+        <img class="ed-card-img" src="images/10_industrial_printer.png" alt="Industrial">
+        <div class="ed-card-body"><h3>Industrial</h3></div>
+      </a>
+    </div>
+
+    <!-- Load More -->
+    <div class="ed-load-more">
+      <button>Load More Articles</button>
+    </div>
+
+  </div>
+
+  <!-- ── Sidebar ─────────────────────────────── -->
+  <aside class="ed-sidebar">
+
+    <!-- Newsletter -->
+    <div class="ed-sidebar-block ed-newsletter">
+      <h4>Newsletter</h4>
+      <p>Technical-ceramic breakthroughs, porcelain studio projects, and firing research — delivered monthly. No spam.</p>
+      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="this.querySelector('button').textContent='Subscribed!';this.querySelector('button').disabled=true;">
+        <input type="hidden" name="access_key" value="6f33053b-6d08-414b-9615-665f88c98da8">
+        <input type="hidden" name="subject" value="Newsletter Signup — 3dprintceramics.com">
+        <input type="hidden" name="from_name" value="Newsletter Signup">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Suppliers & Connections -->
+    <div class="ed-sidebar-block" id="suppliers">
+      <h4>Suppliers &amp; Connections</h4>
+      <div class="ed-popular-item">
+        <div>
+          <h3><a href="#">Ceramic Printers</a></h3>
+          <div class="ed-popular-meta">DLP, binder-jet &amp; paste-extrusion systems · 14 suppliers</div>
+        </div>
+      </div>
+      <div class="ed-popular-item">
+        <div>
+          <h3><a href="#">Pastes &amp; Slurries</a></h3>
+          <div class="ed-popular-meta">Alumina, zirconia, porcelain, silicon carbide · 19 suppliers</div>
+        </div>
+      </div>
+      <div class="ed-popular-item">
+        <div>
+          <h3><a href="#">Kilns &amp; Firing</a></h3>
+          <div class="ed-popular-meta">Debind &amp; sinter furnaces, firing services · 23 listed</div>
+        </div>
+      </div>
+      <div class="ed-popular-item">
+        <div>
+          <h3><a href="#">Studios</a></h3>
+          <div class="ed-popular-meta">Ceramic print studios &amp; production partners · 26 listed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Most Read -->
+    <div class="ed-sidebar-block">
+      <h4>Most Read</h4>
+      <div class="ed-popular-item">
+        <span class="ed-popular-num">1</span>
+        <div>
+          <h3><a href="#">Zirconia DLP Printing Hits 99.5% Density After Sintering</a></h3>
+          <div class="ed-popular-meta">9.6K reads</div>
+        </div>
+      </div>
+      <div class="ed-popular-item">
+        <span class="ed-popular-num">2</span>
+        <div>
+          <h3><a href="#">Silicon Carbide CMCs Reach Turbine-Blade Qualification</a></h3>
+          <div class="ed-popular-meta">8.2K reads</div>
+        </div>
+      </div>
+      <div class="ed-popular-item">
+        <span class="ed-popular-num">3</span>
+        <div>
+          <h3><a href="#">Paste-Extrusion Porcelain Passes Thermal-Shock Tests</a></h3>
+          <div class="ed-popular-meta">6.7K reads</div>
+        </div>
+      </div>
+      <div class="ed-popular-item">
+        <span class="ed-popular-num">4</span>
+        <div>
+          <h3><a href="#">New Alumina Slurries Cut Sintering Shrinkage Variance in Half</a></h3>
+          <div class="ed-popular-meta">5.9K reads</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ad Placeholder -->
+    <div class="ed-sidebar-block" style="text-align:center; color: var(--text-faint); font-size: 0.75rem; padding: 2.5rem 1rem;">
+      <div style="border: 1px dashed var(--border); border-radius: 4px; padding: 2rem 1rem;">
+        Ad Space<br>300×250
+      </div>
+    </div>
+
+    <!-- Network Links -->
+    <div class="ed-sidebar-block">
+      <h4>PrintWire Network</h4>
+      <div class="ed-network-links">
+        <a href="https://3dprinttile.com">Tile</a>
+        <a href="https://3dprintporcelain.com">Porcelain</a>
+        <a href="https://3dprintstone.com">Stone</a>
+        <a href="https://3dprintarchitecture.com">Architecture</a>
+        <a href="https://dmls3d.com">Metal</a>
+        <a href="https://3dprinttissue.com">Bioprinting</a>
+        <a href="https://3dprintcircuitry.com">Electronics</a>
+        <a href="https://sendcutship.com">Manufacturing</a>
+      </div>
+    </div>
+
+    <!-- Studio CTA -->
+    <div class="ed-sidebar-block" style="background: linear-gradient(135deg, rgba(94,139,110,0.12), rgba(94,139,110,0.04)); border-color: var(--border-accent);">
+      <h4 style="color: var(--accent);">List Your Studio</h4>
+      <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.5;">Ceramic print studio, paste supplier, or firing service? Get listed in the directory.</p>
+      <a href="contact.html" style="display:block;text-align:center;padding:0.65rem;background:var(--accent);border-radius:4px;color:#fff;font-weight:600;font-size:0.8rem;transition:background 0.25s;" onmouseover="this.style.background='var(--accent-dark)'" onmouseout="this.style.background='var(--accent)'">Get in Touch</a>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ── Footer ─────────────────────────────────── -->
+<footer class="ed-footer">
+  <div class="ed-footer-inner">
+    <div class="ed-footer-brand">
+      <div class="ed-logo" style="font-size:1.3rem; margin-bottom: 0.5rem;">3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">CERAMICS</span></div>
+      <p>Technical ceramics, porcelain, tile, and stone additive manufacturing news, research, and a directory connecting studios to suppliers. Part of the PrintWire network.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">News</a></li>
+        <li><a href="/articles/">Research</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Coverage</h4>
+      <ul>
+        <li><a href="#">Technical Ceramics</a></li>
+        <li><a href="#">Porcelain</a></li>
+        <li><a href="#">Tile &amp; Facades</a></li>
+        <li><a href="advertise.html">Advertise With Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Applications</h4>
+      <ul>
+        <li><a href="#">Decor &amp; Vases</a></li>
+        <li><a href="#">Tableware</a></li>
+        <li><a href="#">Architecture</a></li>
+        <li><a href="#">Technical</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ed-footer-bottom">
+    <span>&copy; 2026 3D Print Ceramics. Part of the <a href="https://3dprint.space" style="color:var(--accent);">PrintWire</a> network.</span>
+    <span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+// ── Mobile nav toggle ──
+document.querySelector('.ed-nav-toggle')?.addEventListener('click', () => {
+  document.querySelector('.ed-nav').classList.toggle('open');
+});
+
+// ── Theme toggle (light/dark) — light default ──
+(function() {
+  const btn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  function setTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('ed-theme', theme);
+    btn.innerHTML = theme === 'dark' ? '&#9790;' : '&#9728;';
+    btn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+  }
+  const saved = localStorage.getItem('ed-theme');
+  setTheme(saved || 'light');
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') || 'light';
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+})();
+
+// ── News Feed: network-wide PrintWire Originals + industry RSS ──
+(function() {
+  var grid = document.getElementById('newsGrid');
+  var orig = document.getElementById('pwOriginals');
+
+  var feeds = [
+    { url: 'https://news.google.com/rss/search?q=ceramic+3D+printing+additive+manufacturing&hl=en-US&gl=US&ceid=US:en', name: 'Google News' },
+    { url: 'https://news.google.com/rss/search?q=technical+ceramics+zirconia+alumina+printing&hl=en-US&gl=US&ceid=US:en', name: 'Google News' },
+    { url: 'https://news.google.com/rss/search?q=3D+printed+porcelain+tile+stone&hl=en-US&gl=US&ceid=US:en', name: 'Google News' },
+    { url: 'https://3dprintingindustry.com/feed/', name: '3DPI' }
+  ];
+
+  var api = 'https://api.rss2json.com/v1/api.json?rss_url=';
+  var rss = [];
+  var localArts = [];
+  var loaded = 0;
+  var total = feeds.length;
+  var fallbackImgs = [
+    'images/01_voronoi_vase.png','images/02_printer_action.png','images/03_textured_collection.png',
+    'images/05_lattice_cubes.png','images/06_wall_panel.png','images/07_studio_workstation.png',
+    'images/09_abstract_sculpture.png','images/10_industrial_printer.png'
+  ];
+
+  function stripHtml(html) {
+    var d = document.createElement('div'); d.innerHTML = html;
+    return d.textContent || '';
+  }
+  function esc(s) {
+    var d = document.createElement('div'); d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function card(a, i) {
+    var img = a.img || fallbackImgs[i % fallbackImgs.length];
+    var fb = fallbackImgs[(i+1) % fallbackImgs.length];
+    var open = a.local
+      ? 'onclick="location.href=\'' + esc(a.link) + '\'"'
+      : 'onclick="window.open(\'' + esc(a.link) + '\',\'_blank\',\'noopener\')"';
+    var linkAttrs = a.local ? 'href="' + esc(a.link) + '"'
+      : 'href="' + esc(a.link) + '" target="_blank" rel="noopener"';
+    var badge = a.local
+      ? '<span class="ed-badge" style="background:var(--accent);color:#fff;">' + esc(a.source) + '</span>'
+      : '<span class="ed-badge">' + esc(a.source) + '</span>';
+    return '<article class="ed-card" style="cursor:pointer" ' + open + '>' +
+      '<img class="ed-card-img" src="' + esc(img) + '" alt="" loading="lazy" onerror="this.onerror=null;this.src=\'' + fb + '\'">' +
+      '<div class="ed-card-body">' + badge +
+        '<div class="ed-card-meta">' + esc(a.dateStr || '') + '</div>' +
+        '<h3><a ' + linkAttrs + ' onclick="event.stopPropagation()">' + esc(a.title) + '</a></h3>' +
+        '<p class="ed-card-excerpt">' + esc(a.desc) + '</p>' +
+      '</div></article>';
+  }
+
+  var localReady = fetch('network.json', { cache: 'no-store' })
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(function(items){
+      (items || []).forEach(function(it, i){
+        localArts.push({ title: it.title, link: it.url, desc: it.summary || '',
+          date: it.iso, dateStr: it.date, source: (it.origin || 'PrintWire'), local: true,
+          img: it.img || fallbackImgs[i % fallbackImgs.length] });
+      });
+      if (orig) {
+        orig.innerHTML = localArts.length
+          ? localArts.slice(0, 6).map(card).join('')
+          : '<div style="grid-column:1/-1;padding:1.5rem;color:var(--text-faint);">New PrintWire articles will appear here as they publish.</div>';
+      }
+    })
+    .catch(function(){ if (orig) orig.innerHTML = ''; });
+
+  var timeout = setTimeout(finish, 8000);
+  feeds.forEach(function(feed) {
+    fetch(api + encodeURIComponent(feed.url))
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data.status === 'ok' && data.items) {
+          data.items.forEach(function(item){
+            rss.push({ title: item.title, link: item.link,
+              desc: stripHtml(item.description).substring(0,140) + '…',
+              date: item.pubDate, source: feed.name, local: false,
+              img: item.thumbnail || (item.enclosure && item.enclosure.link) || '' });
+          });
+        }
+      })
+      .catch(function(){})
+      .then(function(){ loaded++; if (loaded === total) { clearTimeout(timeout); finish(); } });
+  });
+
+  var done = false;
+  function finish(){ if (done) return; done = true; localReady.then(render); }
+  function render(){
+    if (!grid) return;
+    var merged = localArts.concat(rss);
+    merged.forEach(function(a){ if (!a.dateStr && a.date) a.dateStr = new Date(a.date).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'}); });
+    merged.sort(function(a,b){ return new Date(b.date) - new Date(a.date); });
+    var top = merged.slice(0, 8);
+    grid.innerHTML = top.length
+      ? top.map(card).join('')
+      : '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Unable to load news.</div>';
+  }
+})();
+</script>
+</body>
+</html>
