@@ -19,7 +19,7 @@ description   = "3D Print Ceramics — the community resource for ceramic additi
 keywords      = "ceramic 3D printing, clay extrusion, ceramics community, DIW printing, ceramic materials, stoneware printing, studio ceramics"
 logoEmoji     = "🏺"
 contactEmail  = "maxdavisgroup@gmail.com"
-ogImage       = "images/01_voronoi_vase.png"
+ogImage       = "/images/03_textured_collection.png"
 footerServicesLabel = "Services"
 
 colorPrimary      = "#c2714f"
