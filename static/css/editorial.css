@@ -396,7 +396,7 @@ h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color
   color: var(--accent-dim);
   line-height: 1;
   min-width: 1.8rem;
-  color: rgba(0,217,255,0.3);
+  color: var(--accent-dim);
 }
 .ed-popular-item h3 { font-size: 0.85rem; font-weight: 500; line-height: 1.35; }
 .ed-popular-item h3 a { color: var(--text); }
@@ -752,24 +752,26 @@ h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color
   .ed-hero-excerpt { display: none; }
 }
 
-/* ── Celadon scheme (ceramic): light default + dark toggle, sage green, Spectral ── */
-:root { --font-display: 'Spectral', serif; --font-body: 'Inter', sans-serif; }
+/* ── Warm Amber scheme (advanced ceramics): light default, Playfair Display + Source Sans 3 ── */
+:root { --font-display: 'Playfair Display', Georgia, serif; --font-body: 'Source Sans 3', system-ui, sans-serif; }
 :root, [data-theme="light"] {
-  --accent: #5E8B6E; --accent-dark: #4A7259; --accent-dim: rgba(94,139,110,0.10);
-  --bg: #F1F3EE; --bg-surface: #FBFCF9; --bg-card: #FFFFFF; --bg-card-hover: #E9EDE4;
-  --bg-sidebar: #F6F8F3; --text: #22302A; --text-dim: #566B62; --text-faint: #93A29A;
-  --heading: #16241E; --border: rgba(32,48,42,0.10); --border-accent: rgba(94,139,110,0.28);
+  --accent: #b06a2a; --accent-dark: #945820; --accent-dim: rgba(176,106,42,0.10);
+  --bg: #F4F1ED; --bg-surface: #FDFCFA; --bg-card: #FFFFFF; --bg-card-hover: #EDE8E2;
+  --bg-sidebar: #F8F6F2; --text: #2A2420; --text-dim: #6B5E54; --text-faint: #9A8E84;
+  --heading: #1E1814; --border: rgba(42,36,32,0.10); --border-accent: rgba(176,106,42,0.28);
+  --badge-bg: rgba(176,106,42,0.10);
 }
 [data-theme="dark"] {
-  --accent: #7BA88A; --accent-dark: #5E8B6E; --accent-dim: rgba(123,168,138,0.14);
-  --bg: #14201A; --bg-surface: #1B2A22; --bg-card: #203128; --bg-card-hover: #253A2E;
-  --bg-sidebar: #17241D; --text: #E8EEE9; --text-dim: #97A79E; --text-faint: #647268;
-  --heading: #FFFFFF; --border: rgba(255,255,255,0.08); --border-accent: rgba(123,168,138,0.28);
+  --accent: #c47a3a; --accent-dark: #b06a2a; --accent-dim: rgba(196,122,58,0.14);
+  --bg: #1A1410; --bg-surface: #231C16; --bg-card: #2C231B; --bg-card-hover: #362B21;
+  --bg-sidebar: #1E1712; --text: #EDE8E2; --text-dim: #A89E94; --text-faint: #6E635A;
+  --heading: #FFFFFF; --border: rgba(255,255,255,0.08); --border-accent: rgba(196,122,58,0.28);
+  --badge-bg: rgba(196,122,58,0.12);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme]) {
-  --bg: #14201A; --bg-surface: #1B2A22; --bg-card: #203128; --text: #E8EEE9;
-  --text-dim: #97A79E; --heading: #FFFFFF; --border: rgba(255,255,255,0.08);
-  --accent: #7BA88A; --accent-dark: #5E8B6E;
+  --bg: #1A1410; --bg-surface: #231C16; --bg-card: #2C231B; --text: #EDE8E2;
+  --text-dim: #A89E94; --heading: #FFFFFF; --border: rgba(255,255,255,0.08);
+  --accent: #c47a3a; --accent-dark: #b06a2a; --badge-bg: rgba(196,122,58,0.12);
 } }
 
 /* variant: two-column split hero */
