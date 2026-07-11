@@ -169,36 +169,10 @@
     <!-- Analysis & Deep Dives -->
     <div class="ed-section-label">
       Analysis &amp; Deep Dives
-      <a href="#">View All &rarr;</a>
+      <a href="/articles/">View All &rarr;</a>
     </div>
-    <div class="ed-list">
-      <article class="ed-list-item">
-        <img src="images/02_zirconia_ceramic.png" alt="Printed ceramic sculpture">
-        <div>
-          <span class="ed-badge">Technical</span>
-          <div class="ed-card-meta">June 24, 2026 · 9 min read</div>
-          <h3><a href="#">Zirconia vs. Alumina: Choosing a Technical Ceramic for DLP Printing</a></h3>
-          <p class="ed-card-excerpt">Density, flexural strength, and sintering shrinkage diverge sharply between the two workhorse technical ceramics. A materials engineer's comparison.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/03_ceramic_heat.png" alt="Printed porcelain tableware">
-        <div>
-          <span class="ed-badge">Tableware</span>
-          <div class="ed-card-meta">June 20, 2026 · 7 min read</div>
-          <h3><a href="#">Printed Porcelain: Firing Tableware to Slip-Cast Standards</a></h3>
-          <p class="ed-card-excerpt">How studios are dialing in paste extrusion, drying, and glaze firing to match traditional slip-cast quality at production scale.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/04_sintered_ceramic.png" alt="Ceramic wall panel">
-        <div>
-          <span class="ed-badge">Architecture</span>
-          <div class="ed-card-meta">June 18, 2026 · 10 min read</div>
-          <h3><a href="#">Printed Ceramic Facade Tiles: Parametric Relief Without Molds</a></h3>
-          <p class="ed-card-excerpt">Glazed architectural ceramics with per-tile geometry are moving from art installations to specified cladding systems.</p>
-        </div>
-      </article>
+    <div class="ed-list" id="pwDeepDives">
+      <div style="padding:1.5rem;color:var(--text-faint);">Loading analysis…</div>
     </div>
 
     <!-- Applications -->
@@ -531,6 +505,31 @@ document.querySelector('.ed-nav-toggle')?.addEventListener('click', () => {
       ? top.map(card).join('')
       : '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Unable to load news.</div>';
   }
+})();
+
+// -- Analysis & Deep Dives: PrintWire catalog in list format --
+(function(){
+  var box = document.getElementById('pwDeepDives');
+  if (!box) return;
+  function esc(s){var d=document.createElement('div');d.appendChild(document.createTextNode(s==null?'':s));return d.innerHTML;}
+  var empty = '<div style="padding:1.5rem;color:var(--text-faint);">In-depth analysis and deep dives are on the way — check back soon.</div>';
+  fetch('network.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(function(items){
+      items = (items || []).slice();
+      items.sort(function(a,b){ return (b.iso||'').localeCompare(a.iso||''); });
+      if (!items.length){ box.innerHTML = empty; return; }
+      box.innerHTML = items.slice(0,8).map(function(a){
+        var img = a.img ? '<img src="'+esc(a.img)+'" alt="" loading="lazy">' : '';
+        var meta = esc(a.date||'') + (a.origin ? ' · '+esc(a.origin) : '');
+        return '<article class="ed-list-item">'+img+'<div>'+
+          '<div class="ed-card-meta">'+meta+'</div>'+
+          '<h3><a href="'+esc(a.url)+'">'+esc(a.title)+'</a></h3>'+
+          '<p class="ed-card-excerpt">'+esc(a.summary||'')+'</p>'+
+          '</div></article>';
+      }).join('');
+    })
+    .catch(function(){ box.innerHTML = empty; });
 })();
 </script>
 </body>
